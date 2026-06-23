@@ -1,0 +1,333 @@
+{
+  "meta": {
+    "source": "Forgotten Realms (Faerûn)",
+    "edition": "5e",
+    "licenseNotice": "This file must only contain content you are licensed to include. Do not commit proprietary text unless allowed by the license."
+  },
+  "races": [
+    {
+      "key": "human-faerun",
+      "name": "Human (Faerûn)",
+      "abilityBonuses": { "strength": 1, "dexterity": 1, "constitution": 1, "intelligence": 1, "wisdom": 1, "charisma": 1 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "variant-human-faerun",
+      "name": "Variant Human (Faerûn)",
+      "abilityBonuses": null,
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common"],
+      "notes": "Variant human: +1 to two different ability scores or use custom skills/feat per licensed text",
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "dwarf-hill",
+      "name": "Hill Dwarf",
+      "abilityBonuses": { "constitution": 2, "wisdom": 1 },
+      "size": "Medium",
+      "speed": 25,
+      "languages": ["Common", "Dwarvish"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "dwarf-mountain",
+      "name": "Mountain Dwarf",
+      "abilityBonuses": { "constitution": 2, "strength": 2 },
+      "size": "Medium",
+      "speed": 25,
+      "languages": ["Common", "Dwarvish"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "elf-high",
+      "name": "High Elf",
+      "abilityBonuses": { "dexterity": 2, "intelligence": 1 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common", "Elvish"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "elf-wood",
+      "name": "Wood Elf",
+      "abilityBonuses": { "dexterity": 2, "wisdom": 1 },
+      "size": "Medium",
+      "speed": 35,
+      "languages": ["Common", "Elvish"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "elf-drow",
+      "name": "Drow (Dark Elf)",
+      "abilityBonuses": { "dexterity": 2, "charisma": 1 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common", "Elvish", "Undercommon"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "elf-eladrin",
+      "name": "Eladrin",
+      "abilityBonuses": { "dexterity": 2, "charisma": 1 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common", "Elvish"],
+      "notes": "Fey-related variant common in Faerûn lore",
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "half-elf",
+      "name": "Half-Elf",
+      "abilityBonuses": { "charisma": 2 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common", "Elvish"],
+      "notes": "Half-elves also gain +1 to two other ability scores of choice",
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "half-orc",
+      "name": "Half-Orc",
+      "abilityBonuses": { "strength": 2, "constitution": 1 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common", "Orc"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "tiefling-faerun",
+      "name": "Tiefling",
+      "abilityBonuses": { "charisma": 2, "intelligence": 1 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common", "Infernal"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "dragonborn-faerun",
+      "name": "Dragonborn",
+      "abilityBonuses": { "strength": 2, "charisma": 1 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common", "Draconic"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "gnome-rock",
+      "name": "Rock Gnome",
+      "abilityBonuses": { "intelligence": 2, "constitution": 1 },
+      "size": "Small",
+      "speed": 25,
+      "languages": ["Common", "Gnomish"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "gnome-forest",
+      "name": "Forest Gnome",
+      "abilityBonuses": { "intelligence": 2, "dexterity": 1 },
+      "size": "Small",
+      "speed": 25,
+      "languages": ["Common", "Gnomish"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "halfling-lightfoot",
+      "name": "Lightfoot Halfling",
+      "abilityBonuses": { "dexterity": 2, "charisma": 1 },
+      "size": "Small",
+      "speed": 25,
+      "languages": ["Common", "Halfling"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "halfling-stout",
+      "name": "Stout Halfling",
+      "abilityBonuses": { "dexterity": 2, "constitution": 1 },
+      "size": "Small",
+      "speed": 25,
+      "languages": ["Common", "Halfling"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "aarakocra",
+      "name": "Aarakocra",
+      "abilityBonuses": { "dexterity": 2, "wisdom": 1 },
+      "size": "Medium",
+      "speed": 25,
+      "flyingSpeed": 50,
+      "languages": ["Auran", "Common"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "goliath",
+      "name": "Goliath",
+      "abilityBonuses": { "strength": 2, "constitution": 1 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common", "Giant"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "firbolg",
+      "name": "Firbolg",
+      "abilityBonuses": { "wisdom": 2, "strength": 1 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common", "Giant"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "kenku",
+      "name": "Kenku",
+      "abilityBonuses": { "dexterity": 2, "wisdom": 1 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "lizardfolk",
+      "name": "Lizardfolk",
+      "abilityBonuses": { "constitution": 2, "wisdom": 1 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "tabaxi",
+      "name": "Tabaxi",
+      "abilityBonuses": { "dexterity": 2, "charisma": 1 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "tortle",
+      "name": "Tortle",
+      "abilityBonuses": { "strength": 2, "wisdom": 1 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "triton",
+      "name": "Triton",
+      "abilityBonuses": { "strength": 1, "constitution": 1, "charisma": 1 },
+      "size": "Medium",
+      "speed": 30,
+      "swimSpeed": 30,
+      "languages": ["Common", "Primordial"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "centaur",
+      "name": "Centaur",
+      "abilityBonuses": { "strength": 2, "wisdom": 1 },
+      "size": "Medium",
+      "speed": 40,
+      "languages": ["Common"],
+      "notes": "Playtest/variant race in some Faerûn sources",
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "minotaur",
+      "name": "Minotaur",
+      "abilityBonuses": { "strength": 2, "constitution": 1 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "leonin",
+      "name": "Leonin",
+      "abilityBonuses": { "strength": 2, "constitution": 1 },
+      "size": "Medium",
+      "speed": 35,
+      "languages": ["Common"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "satyr",
+      "name": "Satyr",
+      "abilityBonuses": { "charisma": 2, "dexterity": 1 },
+      "size": "Medium",
+      "speed": 35,
+      "languages": ["Common"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "simic-hybrid",
+      "name": "Simic Hybrid",
+      "abilityBonuses": { "constitution": 2 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common"],
+      "notes": "Mechanic-rich race; features omitted — fill from licensed source",
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "aasimar-guardian",
+      "name": "Aasimar (Protector)",
+      "abilityBonuses": { "charisma": 2, "wisdom": 1 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common", "Celestial"],
+      "notes": "Movanic Deva and other planetouched variants can be added separately",
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "cambion",
+      "name": "Cambion",
+      "abilityBonuses": { "charisma": 2, "intelligence": 1 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common", "Infernal"],
+      "notes": "Cambion is traditionally a fiendish lineage; treat as lineage/monster race",
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "movanic-deva",
+      "name": "Movanic Deva",
+      "abilityBonuses": { "wisdom": 2, "charisma": 1 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common", "Celestial"],
+      "notes": "Planar being closely tied to Faerûn lore; include only if licensed",
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "githyanki",
+      "name": "Githyanki",
+      "abilityBonuses": { "strength": 1, "intelligence": 2 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common", "Gith"],
+      "source": "Forgotten Realms"
+    },
+    {
+      "key": "githzerai",
+      "name": "Githzerai",
+      "abilityBonuses": { "wisdom": 2, "strength": 1 },
+      "size": "Medium",
+      "speed": 30,
+      "languages": ["Common", "Gith"],
+      "source": "Forgotten Realms"
+    }
+  ],
+
+  "classes": [],
+
+  "backgrounds": [],
+
+  "feats": [],
+
+  "allSpells": []
+}

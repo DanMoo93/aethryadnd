@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.local
+server/data/
+server/private/
+server/uploads/maps/*
+!server/uploads/maps/.gitkeep
+*.log
+.DS_Store

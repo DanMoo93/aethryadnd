@@ -1,0 +1,48 @@
+// SRD 5.1 feats. `prerequisite` is a human-readable string (used for display,
+// not currently enforced programmatically — the wizard surfaces it as a note).
+
+export const FEATS = [
+  { key: 'alert', name: 'Alert', description: 'You gain +5 to initiative, can\u2019t be surprised while conscious, and other creatures don\u2019t gain advantage on attack rolls against you as a result of being unseen by you.' },
+  { key: 'athlete', name: 'Athlete', description: 'Improve Strength or Dexterity by 1. Standing up from prone costs only 5 feet of movement, climbing doesn\u2019t cost extra movement, and you can make a running long or high jump after moving only 5 feet.' },
+  { key: 'actor', name: 'Actor', description: 'Improve Charisma by 1. You have advantage on Deception and Performance checks to pass yourself off as a different person, and can mimic the speech or sounds of others.' },
+  { key: 'charger', name: 'Charger', description: 'When you use your action to Dash, you can use a bonus action to make one melee weapon attack or shove a creature.' },
+  { key: 'crossbow-expert', name: 'Crossbow Expert', description: 'You ignore the loading quality of crossbows, being within 5 feet of a hostile creature doesn\u2019t impose disadvantage on ranged attacks, and you can make a bonus-action attack with a hand crossbow after attacking with a one-handed weapon.' },
+  { key: 'defensive-duelist', name: 'Defensive Duelist', prerequisite: 'Dexterity 13 or higher', description: 'When wielding a finesse weapon and hit by a melee attack, you can use your reaction to add your proficiency bonus to your AC for that attack.' },
+  { key: 'dual-wielder', name: 'Dual Wielder', description: 'You gain +1 AC while wielding two melee weapons, can use two-handed weapons in two-weapon fighting, and can draw or stow two one-handed weapons at once.' },
+  { key: 'dungeon-delver', name: 'Dungeon Delver', description: 'Advantage on Perception and Investigation checks to detect traps, advantage on saves against traps, resistance to trap damage, and you can search for traps at normal speed.' },
+  { key: 'durable', name: 'Durable', description: 'Improve Constitution by 1. When you roll a Hit Die to regain hit points, the minimum number of hit points you regain equals twice your Constitution modifier.' },
+  { key: 'elemental-adept', name: 'Elemental Adept', prerequisite: 'Spellcasting ability', description: 'Choose a damage type. Spells you cast ignore resistance to that damage type, and treat any 1 on a damage die for that type as a 2.' },
+  { key: 'great-weapon-master', name: 'Great Weapon Master', description: 'On a critical hit or to reduce a creature to 0 HP with a heavy weapon, you can make one bonus-action melee attack. You can take -5 to an attack roll to add +10 to damage.' },
+  { key: 'healer', name: 'Healer', description: 'Using a healer\u2019s kit to stabilize a creature also restores 1 HP. You can also use it as an action to restore additional hit points.' },
+  { key: 'heavily-armored', name: 'Heavily Armored', prerequisite: 'Proficiency with medium armor', description: 'Improve Strength by 1. You gain proficiency with heavy armor.' },
+  { key: 'heavy-armor-master', name: 'Heavy Armor Master', prerequisite: 'Proficiency with heavy armor', description: 'Improve Strength by 1. While wearing heavy armor, bludgeoning, piercing, and slashing damage from nonmagical attacks is reduced by 3.' },
+  { key: 'inspiring-leader', name: 'Inspiring Leader', prerequisite: 'Charisma 13 or higher', description: 'You can spend 10 minutes inspiring companions, granting each up to 6 allies temporary hit points.' },
+  { key: 'keen-mind', name: 'Keen Mind', description: 'Improve Intelligence by 1. You always know which way is north, the number of hours until sunrise/sunset, and can accurately recall anything you\u2019ve seen or heard within the past month.' },
+  { key: 'lightly-armored', name: 'Lightly Armored', description: 'Improve Strength or Dexterity by 1. You gain proficiency with light armor.' },
+  { key: 'linguist', name: 'Linguist', description: 'Improve Intelligence by 1. You learn three languages of your choice, and can ably create written ciphers.' },
+  { key: 'lucky', name: 'Lucky', description: 'You have 3 luck points. You can spend one to roll an additional d20 for an attack roll, ability check, or saving throw, and choose which to use.' },
+  { key: 'mage-slayer', name: 'Mage Slayer', description: 'You can use your reaction to make a melee attack against a creature within 5 feet that casts a spell, and you have advantage on saving throws against spells cast by creatures within 5 feet.' },
+  { key: 'medium-armor-master', name: 'Medium Armor Master', prerequisite: 'Proficiency with medium armor', description: 'Wearing medium armor doesn\u2019t impose disadvantage on Stealth checks, and you can add up to 3 (instead of 2) from Dexterity to AC if wearing medium armor.' },
+  { key: 'mobile', name: 'Mobile', description: 'Your speed increases by 10 feet. When you use the Dash action, difficult terrain doesn\u2019t cost extra movement for the rest of the turn. Making a melee attack against a creature doesn\u2019t provoke opportunity attacks from that creature for the rest of the turn.' },
+  { key: 'moderately-armored', name: 'Moderately Armored', prerequisite: 'Proficiency with light armor', description: 'Improve Strength or Dexterity by 1. You gain proficiency with medium armor and shields.' },
+  { key: 'mounted-combatant', name: 'Mounted Combatant', description: 'You have advantage on melee attack rolls against unmounted creatures smaller than your mount, can force an attack targeting your mount to target you, and your mount takes no damage on a successful Dexterity save against an area effect.' },
+  { key: 'observant', name: 'Observant', description: 'Improve Intelligence or Wisdom by 1. If you can see a creature\u2019s mouth while it speaks a language you understand, you can interpret what it\u2019s saying by reading its lips. You gain +5 to passive Perception and passive Investigation.' },
+  { key: 'polearm-master', name: 'Polearm Master', description: 'You can make a bonus-action attack with the opposite end of a glaive, halberd, quarterstaff, or spear, and creatures provoke an opportunity attack from you when they enter your reach with such a weapon.' },
+  { key: 'resilient', name: 'Resilient', description: 'Choose one ability score and increase it by 1. You gain proficiency in saving throws using that ability.' },
+  { key: 'ritual-caster', name: 'Ritual Caster', prerequisite: 'Intelligence or Wisdom 13 or higher', description: 'You learn two ritual spells from a class\u2019s spell list and can cast them as rituals.' },
+  { key: 'savage-attacker', name: 'Savage Attacker', description: 'Once per turn when you roll damage for a melee weapon attack, you can reroll the weapon\u2019s damage dice and use either total.' },
+  { key: 'sentinel', name: 'Sentinel', description: 'When you hit a creature with an opportunity attack, its speed becomes 0 for the rest of the turn. Creatures provoke opportunity attacks from you even if they take the Disengage action, and when a creature within 5 feet attacks someone other than you, you can use your reaction to make a melee attack against it.' },
+  { key: 'sharpshooter', name: 'Sharpshooter', description: 'Attacking at long range doesn\u2019t impose disadvantage, ranged attacks ignore half and three-quarters cover, and you can take -5 to an attack roll to add +10 to damage with a ranged weapon attack.' },
+  { key: 'shield-master', name: 'Shield Master', description: 'If you take the Attack action, you can use a bonus action to shove a creature with your shield. You can add your shield\u2019s AC bonus to Dexterity saves against effects that target only you, and you have advantage on Dexterity saves against effects that would deal half damage on success if you are wielding a shield.' },
+  { key: 'skilled', name: 'Skilled', description: 'You gain proficiency in any combination of three skills or tools of your choice.' },
+  { key: 'skulker', name: 'Skulker', prerequisite: 'Dexterity 13 or higher', description: 'You can hide when only lightly obscured, missing a ranged attack doesn\u2019t reveal your position, and dim light doesn\u2019t impede your passive Perception.' },
+  { key: 'spell-sniper', name: 'Spell Sniper', prerequisite: 'Spellcasting ability', description: 'You double the range of spells that require an attack roll, your spell attacks ignore half and three-quarters cover, and you learn one attack-roll cantrip from any spellcasting class.' },
+  { key: 'tavern-brawler', name: 'Tavern Brawler', description: 'Improve Strength or Constitution by 1. Proficiency with improvised weapons, your unarmed strike uses a d4 for damage, and on a hit with an unarmed strike or improvised weapon you can use a bonus action to grapple.' },
+  { key: 'tough', name: 'Tough', description: 'Your hit point maximum increases by 2 per character level, and increases by 2 again whenever you gain a level.' },
+  { key: 'war-caster', name: 'War Caster', prerequisite: 'Spellcasting ability', description: 'You have advantage on Constitution saves to maintain concentration, can perform somatic spell components even with weapons or a shield in your hands, and can cast a spell as your reaction to an opportunity attack instead of making the attack.' },
+  { key: 'weapon-master', name: 'Weapon Master', description: 'Improve Strength or Dexterity by 1. You gain proficiency with four weapons of your choice.' },
+];
+
+export function getFeat(key) {
+  return FEATS.find((f) => f.key === key) || null;
+}
