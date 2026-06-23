@@ -1,29 +1,28 @@
+databases:
+  - name: aethryadnd-db
+    plan: free
+
 services:
   - type: web
     name: aethryadnd-api
     runtime: node
+    plan: free
     rootDir: server
-    plan: starter
     buildCommand: npm ci
     startCommand: npm start
     healthCheckPath: /api/health
-    disk:
-      name: app-data
-      mountPath: /var/data
-      sizeGB: 5
     envVars:
       - key: CLIENT_ORIGIN
         value: https://aethryadnd.online
-      - key: DATA_DIR
-        value: /var/data/db
-      - key: UPLOADS_DIR
-        value: /var/data/uploads
+      - key: DATABASE_URL
+        fromDatabase:
+          name: aethryadnd-db
+          property: connectionString
       - key: JWT_SECRET
         generateValue: true
 
-  - type: web
+  - type: static
     name: aethryadnd-web
-    runtime: static
     rootDir: client
     buildCommand: npm ci && npm run build
     staticPublishPath: dist
@@ -33,6 +32,6 @@ services:
         destination: /index.html
     envVars:
       - key: VITE_API_URL
-        value: https://aethryadnd-api.onrender.com/api
+        value: https://api.aethryadnd.online/api
       - key: VITE_SOCKET_URL
-        value: https://aethryadnd-api.onrender.com
+        value: https://api.aethryadnd.online

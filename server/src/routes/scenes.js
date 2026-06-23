@@ -1,10 +1,6 @@
 import express from 'express';
 import multer from 'multer';
-import path from 'path';
-import { mkdirSync } from 'fs';
-import { v4 as uuid } from 'uuid';
 import { requireAuth } from '../middleware/auth.js';
-import { uploadsDir } from '../config/paths.js';
 import {
   createScene,
   listScenesForCampaign,
@@ -18,19 +14,8 @@ import {
   getMembership,
 } from '../db/repository.js';
 
-const mapsDir = path.join(uploadsDir, 'maps');
-mkdirSync(mapsDir, { recursive: true });
-
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, mapsDir),
-  filename: (req, file, cb) => {
-    const ext = path.extname(file.originalname) || '.png';
-    cb(null, `${uuid()}${ext}`);
-  },
-});
-
 const upload = multer({
-  storage,
+  storage: multer.memoryStorage(),
   limits: { fileSize: 15 * 1024 * 1024 }, // 15MB
   fileFilter: (req, file, cb) => {
     const allowed = ['image/png', 'image/jpeg', 'image/webp', 'image/gif'];
@@ -82,7 +67,7 @@ router.post('/upload-map', upload.single('map'), async (req, res) => {
   const membership = await requireGm(req, res, campaignId);
   if (!membership) return;
   if (!req.file) return res.status(400).json({ error: 'No file uploaded' });
-  const url = `/uploads/maps/${req.file.filename}`;
+  const url = `data:${req.file.mimetype};base64,${req.file.buffer.toString('base64')}`;
   res.status(201).json({ url });
 });
 

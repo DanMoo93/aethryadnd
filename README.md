@@ -11,7 +11,7 @@ tracking.
 
 - **Backend:** Node + Express, Socket.io for real-time events, Multer for map uploads
 - **Frontend:** React + Vite, React Router, Konva.js (`react-konva`) for the map canvas
-- **Database:** lowdb (JSON file) for this prototype — see note below
+- **Database:** lowdb (JSON file) locally, Postgres on Render for the deployed free setup
 - **Auth:** JWT + bcrypt password hashing
 
 ### About the database
@@ -118,17 +118,17 @@ and share the invite code with your group so they can join.
 ## Deploying
 
 The repo now includes a Render Blueprint in [render.yaml](./render.yaml).
-The intended production layout is:
+The current deployment layout is the mostly-free route:
 
-1. Backend web service at `api.aethryadnd.online`
-2. Frontend static site at `aethryadnd.online`
-3. Persistent disk on the backend so the JSON store and uploaded maps survive deploys
+1. Backend free web service at `api.aethryadnd.online`
+2. Frontend free static site at `aethryadnd.online`
+3. Free Render Postgres for persistent campaign data
+4. Uploaded maps are stored as image data in the database, so no disk mount is needed
 
 After connecting the GitHub repo to Render, add the custom domains in the
 Render dashboard and point DNS at the generated targets. The frontend also
 needs the backend URL in `VITE_API_URL` / `VITE_SOCKET_URL`; the Blueprint
-sets sensible defaults for the Render subdomain, and you can update them
-to your custom API domain after both services are live.
+already points those at the custom API domain.
 
 ## What's built (v1 + v2 + v3)
 

@@ -26,7 +26,14 @@ function cellKey(col, row) {
 export default function MapCanvas({ scene, isGm, socket, userId, characters = [] }) {
   const stageWidth = scene.gridWidth * scene.cellSize;
   const stageHeight = scene.gridHeight * scene.cellSize;
-  const mapImage = useImage(scene.mapUrl ? `${import.meta.env.VITE_SOCKET_URL || 'http://localhost:4000'}${scene.mapUrl}` : null);
+  const mapSource = scene.mapUrl
+    ? scene.mapUrl.startsWith('data:')
+      ? scene.mapUrl
+      : scene.mapUrl.startsWith('http')
+        ? scene.mapUrl
+        : `${import.meta.env.VITE_SOCKET_URL || 'http://localhost:4000'}${scene.mapUrl}`
+    : null;
+  const mapImage = useImage(mapSource);
   const characterById = new Map(characters.map((character) => [character.id, character]));
 
   const [tokens, setTokens] = useState(scene.tokens || []);
